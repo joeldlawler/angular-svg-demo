@@ -1,6 +1,41 @@
-<ul>
-  <li *ngFor="let employee of employees" >
-    <span>{{employee.id}}</span>
-    <span>{{employee.name}}</span>
-  </li>
-</ul>
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 900 750" style="enable-background:new 0 0 900 750;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#000000;stroke-miterlimit:10;}
+	.st1{fill:#D3D3D3;stroke:#000000;stroke-miterlimit:10;}
+	.st2{fill:#636363;stroke:#000000;stroke-miterlimit:10;}
+	.st3{fill:#EDEDED;stroke:#000000;stroke-miterlimit:10;}
+	.st4{fill:#ED1C24;stroke:#000000;stroke-miterlimit:10;}
+</style>
+<g id="box">
+	<rect x="0.7" class="st0" width="899.3" height="750"/>
+</g>
+<g id="outline">
+	<path class="st1" d="M38.7,724.4H64l6.5,16.9l154.8-75.7l9.5,19.4l170.8-84.1l11.5,22.9l253.4-125.5c0,0,180.6-86.2,186.2-305.7
+		c0.7-28.6,0-114.5,0-114.5l-25.2,1l-0.2-24.9H457.4l-20.9,10.5l-5.6-10.5h-71.4H110.5l0.7,23.8l-25.3-0.1l0.1,163.6H61.7v189.2
+		l-22.9,0.3L38.7,724.4"/>
+</g>
+<g id="elevators">
+	<path class="st0" d="M342.4,453.9"/>
+	<path class="st0" d="M330.4,436.1"/>
+	<path class="st0" d="M339.8,293.8"/>
+	<line class="st0" x1="339.8" y1="337" x2="339.8" y2="312.2"/>
+	<path class="st0" d="M339.8,354.9"/>
+	<polyline class="st2" points="339.8,293.8 339.8,235.1 244.7,235.1 244.7,479.1 272,493.8 339.8,459.2 339.8,354.9 	"/>
+	<path class="st0" d="M394.4,257.7"/>
+	<line class="st0" x1="394.4" y1="293.7" x2="394.4" y2="270.1"/>
+	<path class="st0" d="M394.4,295.3"/>
+	<line class="st0" x1="394.4" y1="337" x2="394.4" y2="312.2"/>
+	<path class="st0" d="M394.4,350.5"/>
+	<polyline class="st2" points="394.4,252.2 394.4,235.1 691,235.1 691,285.6 394.4,431.3 394.4,354.9 	"/>
+	<path class="st0" d="M336.4,310.7"/>
+	<polyline class="st3" points="340.3,312.2 335.3,312.2 335.3,324 296.7,324 296.7,286.1 335.3,286.1 335.3,293.8 340.3,293.8 	"/>
+	<polyline class="st3" points="340.3,355.2 335.3,355.2 335.3,367 296.7,367 296.7,329.1 335.3,329.1 335.3,336.8 340.3,336.8 	"/>
+	<polyline class="st3" points="394.3,293.7 399.3,293.7 399.3,281.9 438,281.9 438,319.8 399.3,319.8 399.3,312.1 394.3,312.1 	"/>
+	<polyline class="st3" points="394.3,252 399.3,252 399.3,240.2 438,240.2 438,278.1 399.3,278.1 399.3,270.5 394.3,270.5 	"/>
+	<polyline class="st3" points="394.3,336.9 399.3,336.9 399.3,325.1 438,325.1 438,363 399.3,363 399.3,355.4 394.3,355.4 	"/>
+</g>
+<g id="empolyees">
+	<svg:rect *ngFor="let employee of employees" [attr.x]="employee.x_coordinate" [attr.y]="employee.y_coordinate" class="st4" width="60" height="40"/>
+</g>
+</svg>
