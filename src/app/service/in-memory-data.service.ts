@@ -10,9 +10,6 @@ export class InMemoryDataService implements InMemoryDbService {
       { id: 15, name: 'Bart', y_coordinate: 247, x_coordinate: 207 },
       { id: 16, name: 'Bosco', y_coordinate: 470, x_coordinate: 290 },
     ];
-
-    console.log(employees);
-
     return {employees};
   }
 }
