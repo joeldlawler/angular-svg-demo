@@ -10,6 +10,8 @@ import { RoutingModule } from './routing/routing.module';
 import { InMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService }  from './service/in-memory-data.service';
 
+import { EmployeeService } from './service/employee.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,7 +23,7 @@ import { InMemoryDataService }  from './service/in-memory-data.service';
     RoutingModule,
     InMemoryWebApiModule.forRoot(InMemoryDataService)
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ EmployeeService ],
+  bootstrap: [ AppComponent ]
 })
 export class AppModule { }

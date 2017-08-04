@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { Router }            from '@angular/router';
+
+import { Employee } from '../model/employee';
+import { EmployeeService } from '../service/employee.service';
 
 @Component({
   selector: 'app-index',
@@ -7,9 +11,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IndexComponent implements OnInit {
 
-  constructor() { }
+  employees: Employee[];
+  selectedHero: Employee;
+
+  constructor(
+    private employeeService: EmployeeService,
+    private router: Router) { }
+
+  getEmployeees(): void {
+    this.employeeService
+        .getEmployeees()
+        .then(employees => this.employees = employees);
+  }
+
 
   ngOnInit() {
+    this.getEmployeees(); 
   }
 
 }
