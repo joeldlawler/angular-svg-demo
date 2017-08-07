@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router }            from '@angular/router';
+import { Router } from '@angular/router';
 
 import { Employee } from '../model/employee';
 import { EmployeeService } from '../service/employee.service';
@@ -20,13 +20,16 @@ export class IndexComponent implements OnInit {
 
   getEmployeees(): void {
     this.employeeService
-        .getEmployeees()
-        .then(employees => this.employees = employees);
+      .getEmployeees()
+      .then(employees => this.employees = employees);
   }
 
+  showDetails(id: number): void {
+    console.log(id);
+  }
 
   ngOnInit() {
-    this.getEmployeees(); 
+    this.getEmployeees();
   }
 
 }
